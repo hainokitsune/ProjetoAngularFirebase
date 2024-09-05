@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Paises
+      Países
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,7 @@
 
   <ng-container *ngFor="let pais of this.paises">
     <ion-col size="12" size-lg="4">
-    <ion-item lines="none" class="mousehover">
+    <ion-item lines="none" class="mousehover" (click)="verDetalhes(pais.ccn3)">
       <ion-thumbnail slot="start">
         <img src="{{ pais.flags.png }}">
       </ion-thumbnail>
@@ -23,7 +23,7 @@
           <h3>{{ pais.name.official }}</h3>
         </ion-label>
       </ion-item>
-  </ion-col>
+  </ion-col>                                                                                                                                                                                                                                                                                                          
   </ng-container>
     
 </ion-row>
