@@ -10,10 +10,6 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },
-  {
-    path: 'ver-detalhes',
-    loadChildren: () => import('./ver-detalhes/ver-detalhes.module').then( m => m.VerDetalhesPageModule)
   }
 ];
 
