@@ -14,6 +14,18 @@ const routes: Routes = [
   {
     path: 'ver-detalhes',
     loadChildren: () => import('./ver-detalhes/ver-detalhes.module').then( m => m.VerDetalhesPageModule)
+  },
+  {
+    path: 'sobre',
+    loadChildren: () => import('./sobre/sobre.module').then( m => m.SobrePageModule)
+  },
+  {
+    path: 'galeria',
+    loadChildren: () => import('./galeria/galeria.module').then( m => m.GaleriaPageModule)
+  },
+  {
+    path: 'contato',
+    loadChildren: () => import('./contato/contato.module').then( m => m.ContatoPageModule)
   }
 ];
 
