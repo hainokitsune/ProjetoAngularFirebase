@@ -13,8 +13,25 @@ import { Route, Router } from '@angular/router';
 
 export class HomePage {
 
-  constructor()
+  aluno:any = {
+    nome: null
+  }
+
+  constructor(
+    public crudService: CrudService
+  )
   {   }
 
-  
+ 
+ cadastrar(){
+  this.crudService.insert(this.aluno, 'aluno');
+  this.getAlunos();
+ } 
+ getAlunos(){
+  this.crudService.fetchAll('aluno')
+  .then(response =>{
+    console.log(response);
+  })
+ }
+
 }
