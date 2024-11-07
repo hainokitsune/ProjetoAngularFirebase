@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'ver-detalhes',
     loadChildren: () => import('./ver-detalhes/ver-detalhes.module').then( m => m.VerDetalhesPageModule)
+  },
+  {
+    path: 'cadastrar',
+    loadChildren: () => import('./cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
+  },
+  {
+    path: 'detalhes',
+    loadChildren: () => import('./detalhes/detalhes.module').then( m => m.DetalhesPageModule)
   }
 ];
 
